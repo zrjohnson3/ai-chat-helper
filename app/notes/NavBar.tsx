@@ -7,17 +7,20 @@ import { UserButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 import AddNoteDialog from '../../components/AddEditNoteDialog'
+import ThemeToggleButton from '@/components/ThemeToggleButton'
+import { useTheme } from 'next-themes'
 
 const NavBar = () => {
 
     const [showAddEditNoteDialog, setShowAddEditNoteDialog] = useState(false)
+    const { theme } = useTheme()
 
     return (
         <>
             <div className='p-4 shadow'>
                 <div className='flex flex-wrap gap-3 items-center justify-between max-w-7xl m-auto'>
                     <Link href={'/'} className='flex items-center gap-1'>
-                        <Image src={logo} alt='logo' width={80} height={80} />
+                        <Image src={logo} alt='logo' width={80} height={80} className={`logo ${theme}`} />
                         <span>ZapFlow</span>
                     </Link>
                     <div className='flex gap-4 items-center'>
@@ -25,6 +28,8 @@ const NavBar = () => {
                             <Plus size={20} className="mr-2" />
                             Add Note
                         </Button>
+
+                        <ThemeToggleButton />
 
                         <UserButton afterSignOutUrl='/'
                             appearance={{

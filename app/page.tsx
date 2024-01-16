@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-center gap-5 p-24">
       <div className='flex items-center gap-4'>
-        <Image src={logo} alt='ZapFlow Logo' width={100} height={100} />
+        <Image src={logo} alt='ZapFlow Logo' width={100} height={100} className='logo' />
         <span className='font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl'>ZapFlow</span>
       </div>
       <p className='max-w-prose text-center'>
