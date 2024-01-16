@@ -6,22 +6,22 @@ import logo from "../assets/zapFlow-logo2.5.png"
 import { UserButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
-import AddNoteDialog from '../../components/AddNoteDialog'
+import AddNoteDialog from '../../components/AddEditNoteDialog'
 
 const NavBar = () => {
 
-    const [showAddNoteDialog, setShowAddNoteDialog] = useState(false)
+    const [showAddEditNoteDialog, setShowAddEditNoteDialog] = useState(false)
 
     return (
         <>
             <div className='p-4 shadow'>
                 <div className='flex flex-wrap gap-3 items-center justify-between max-w-7xl m-auto'>
-                    <Link href={'/notes'} className='flex items-center gap-1'>
+                    <Link href={'/'} className='flex items-center gap-1'>
                         <Image src={logo} alt='logo' width={80} height={80} />
                         <span>ZapFlow</span>
                     </Link>
                     <div className='flex gap-4 items-center'>
-                        <Button onClick={() => setShowAddNoteDialog(true)}>
+                        <Button onClick={() => setShowAddEditNoteDialog(true)}>
                             <Plus size={20} className="mr-2" />
                             Add Note
                         </Button>
@@ -39,7 +39,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-            <AddNoteDialog open={showAddNoteDialog} setOpen={setShowAddNoteDialog} />
+            <AddNoteDialog open={showAddEditNoteDialog} setOpen={setShowAddEditNoteDialog} />
         </>
     )
 }
