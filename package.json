@@ -11,7 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.29.1",
     "@clerk/themes": "^1.7.9",
-    "@hookform/resolvers": "^3.3.2",
+    "@hookform/resolvers": "^3.3.4",
     "@pinecone-database/pinecone": "^1.1.2",
     "@prisma/client": "^5.8.0",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -30,7 +30,8 @@
     "prettier-plugin-tailwindcss": "^0.5.9",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.49.2",
+    "react-hook-form": "^7.47.0",
+    "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
