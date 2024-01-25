@@ -9,6 +9,7 @@ import { Plus } from 'lucide-react'
 import AddNoteDialog from '../../components/AddEditNoteDialog'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 import { useTheme } from 'next-themes'
+import AIChatButton from '@/components/AIChatButton'
 
 const NavBar = () => {
 
@@ -17,17 +18,19 @@ const NavBar = () => {
 
     return (
         <>
-            <div className='p-4 shadow'>
+            <div className='p-4 shadow border-b-2'>
                 <div className='flex flex-wrap gap-3 items-center justify-between max-w-7xl m-auto'>
                     <Link href={'/'} className='flex items-center gap-1'>
                         <Image src={logo} alt='logo' width={80} height={80} className={`logo ${theme}`} />
-                        <span>ZapFlow</span>
+                        <span className={"text-xl p-2"}>ZapFlow</span>
                     </Link>
                     <div className='flex gap-4 items-center'>
                         <Button onClick={() => setShowAddEditNoteDialog(true)}>
                             <Plus size={20} className="mr-2" />
                             Add Note
                         </Button>
+
+                        <AIChatButton />
 
                         <ThemeToggleButton />
 
