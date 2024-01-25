@@ -19,7 +19,7 @@ const SearchBox = ({ onSearchChange }: { onSearchChange: (searchText: string) =>
 
     return (
         <div className="flex space-x-2 flex-col-3 py-4 mx-10 items-center" >
-            <Label className="w-1/6 items-center justify-center" >Find Notes: </Label>
+            <Label className="whitespace-nowrap m-4" >Find Notes: </Label>
             <Input
                 type={"search"}
                 value={searchText}
